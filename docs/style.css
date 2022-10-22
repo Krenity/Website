@@ -133,6 +133,7 @@ p {
 
 .mediascroller {
   display: grid;
+  margin-right: -15%;
   grid-auto-columns: 23%;
   overscroll-behavior-inline: contain;
   overflow-x: auto;
@@ -144,7 +145,7 @@ p {
   color: white;
   border-style: solid;
   border-color: transparent;
-  margin-right: 10px;
+  margin-right: 15%;
   display: grid;
   grid-template-rows: min-content;
   gap: var(--_spacer);
@@ -166,12 +167,12 @@ p {
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 #style-2::-webkit-scrollbar-track
 {
-	border-radius: 5px;
+  border-radius: 5px;
   padding-left: 1%;
   display: flex;
   overflow-x: scroll;
   border-style: transparent;
-	background-color: #141414;
+  background-color: #141414;
 }
 
 #style-2::-webkit-scrollbar
@@ -183,5 +184,5 @@ p {
 #style-2::-webkit-scrollbar-thumb
 {
 	border-radius: 5px;
-	background-color: grey;
+	background-color: rgb(36, 36, 36);
 }
