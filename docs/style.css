@@ -10,7 +10,7 @@ body {
     background-color: #181818;
 }
 header {
-    height: 70px;
+    height: 10px;
     align-items: center;
     text-align: center;
 }
@@ -20,12 +20,12 @@ nav {
     text-align: center;
 }
 main{
+    background-color: red;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    height: 300px;
-    align-items: center;
-    text-align: center;
-    padding: 80px;
+    height: 5px;
+    align-items: center top;
+    text-align: center top;
     padding-left: 60px;
     padding-right: 60px;
 }
