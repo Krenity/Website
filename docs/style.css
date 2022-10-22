@@ -48,6 +48,7 @@ p {
 .rainbow {
     background-image: repeating-linear-gradient(45deg, violet, yellow, orange, red, violet, white);
     text-align: center;
+    text-decoration: none;
     font-family: 'Poppins', sans-serif;
     background-size: 800% 800%;
     -webkit-background-clip: text;
