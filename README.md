@@ -1,2 +1,2 @@
 # Website
-https://krenity.github.io/Website/website.html
+https://krenity.github.io/Website/websitemain.html
