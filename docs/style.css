@@ -1,0 +1,189 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    background-color: #181818;
+}
+header {
+    height: 10px;
+    align-items: center;
+    text-align: center;
+}
+nav {
+    height: 5px;
+    align-items: center;
+    text-align: center;
+}
+main{
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    height: 5px;
+    align-items: center top;
+    text-align: center top;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+footer{
+    height: 50px;
+}   
+h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 84px;
+}
+p {
+    color: white;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; 
+    
+}
+.rainbow {
+    background-image: repeating-linear-gradient(45deg, violet, yellow, orange, red, violet, white);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    animation: rainbow 8s ease infinite;
+  }
+  @keyframes rainbow { 
+    0%{background-position:0% 50%} 
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%} 
+}
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: transparent;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #252525;;
+    display: inline-block;
+}
+
+.timertext{
+    color: white;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.text {
+    color: beige;
+}
+.sendemail {
+    border: 0px;
+    font-size: 50px;
+    border-radius: 7px;
+    border-width: 5px;
+    margin-top: 10px;
+    background-color: #252525;
+}
+.emailadress {
+    border-radius: 7px;
+    border-color: #252525;
+    border-width: 5px;
+    border-style: solid;
+    box-shadow: none;
+    background-color: #252525;
+    color: white;
+}
+.name {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #252525;
+    border-width: 5px;
+    margin-bottom: 10px;
+    background-color: #252525;
+    color: white;
+}
+.message {
+    border-radius: 7px;
+    border-color: #252525;
+    border-width: 7px;
+    color: white;
+    border-style: linear;
+    margin-top: 10px;
+    background-color: #252525;
+}
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.mediascroller {
+  display: grid;
+  margin-right: -15%;
+  grid-auto-columns: 23%;
+  overscroll-behavior-inline: contain;
+  overflow-x: auto;
+  grid-auto-flow: column;
+}
+
+.mediaelement {
+  margin-bottom: 50;
+  color: white;
+  border-style: solid;
+  border-color: transparent;
+  margin-right: 15%;
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+.snapsscroller {
+  scroll-snap-type: inline mandatory;
+}
+.snaparragement > * {
+  scroll-snap-align: start;
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+#style-2::-webkit-scrollbar-track
+{
+  border-radius: 5px;
+  padding-left: 1%;
+  display: flex;
+  overflow-x: scroll;
+  border-style: transparent;
+  background-color: #141414;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 1px;
+	background-color: transparent;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: rgb(36, 36, 36);
+}
