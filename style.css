@@ -1,6 +1,7 @@
   * {
 	background-color: #06060B;
 	cursor: none;
+	overflow: hidden; 
   }
   
   body {
