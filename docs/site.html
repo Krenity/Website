@@ -1,81 +1,37 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <script type="text/javascript" src="assets/js/count.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/flipclock.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello 👋 Im Philip</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>Hey 👋 I'm philip</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header></header>
-        <nav></nav>
-        <main>
-            <h1>WHO AM I?</h1>
-            <p>I'm Philip, I absolutely love working with and on computers, networking, security, and cloud engineering are some of the main things I'm passionate about. I love helping people out with anything IoT, helping friends, family, and others helping learn about building their own websites, teaching how to code, creating custom servers, and all-around support. I study T-Levels in Digital Production, Design and Development, Whats that? Its <a class="rainbow" href="https://www.tlevels.gov.uk/students/subjects/digital-production-design-development" target="_blank">THIS,</a> I started on the 5th of september, and as of now have </p>
-            <div id="clockdiv">
-                <div>
-                  <span class="days"></span>
-                  <div class="timertext">Days</div>
-                </div>
-                <div>
-                  <span class="hours"></span>
-                  <div class="timertext">Hours</div>
-                </div>
-                <div>
-                  <span class="minutes"></span>
-                  <div class="timertext">Minutes</div>
-                </div>
-                <div>
-                  <span class="seconds"></span>
-                  <div class="timertext">Seconds</div>
-                </div>
-            </div>
-            <p>Until I take my final exams and go into "the real world". And as for why I made this website? I was bored and wanted something to do, learning python in college is and was really cool so I felt like expanding my knowledge was a good idea for better opportunites and to become smarter 🤓, when I first attempted making a website I quit after a day, realising how easy it is and the fact I or anyone can make a website like this from scratch is impressive and should be done! If you want to look at the source code of this glorious website please click<a class="rainbow" href="https://github.com/Krenity" target="_blank"> GITHUB</a> to go to my github profile where the website is hosted and the source code public, you can also snoop around for any projects im working on!</p>
-            <h1 class="centertext">MY PROJECTS</h1>
-            <div id="style-2"class="mediascroller snapsscroller snaparragement">
-              <div class="mediaelement"><a class="rainbow" href="https://github.com/Krenity/Lab-4---Cookie-clicker-game" target="_blank">A working Cookie Clicker type game made in python in about a week</a></div>
-              <div class="mediaelement"><a class="rainbow" href="https://github.com/Krenity/JKLM-Bomb-party-bot" target="_blank">A working python bot for the game bomb party on jklm.fun made in a few hours</a></div>
-              <div class="mediaelement"><a class="rainbow" href="https://github.com/Krenity/Lab-5" target="_blank">A Game similar to JumpKing made in 4 weeks using GoDot</a></div>
-              <div class="mediaelement">More coming soon!</div>
-              <div class="mediaelement">More coming soon!</div>
-              <div class="mediaelement">More coming soon!</div>
-            </div>
-            
-            
-            
-            <h1 class="centertext">CONTACT ME</h1>
-            <div class="email">
-                    <form target="_blank" action="https://formsubmit.co/philipziobrowski@gmail.com" method="POST">
-                      <div class="form-group">
-                        <div class="form-row">
-                          <div class="col">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="text" name="_honey" style="display:none">
-                            <input class="name"type="text" name="name" class="form-control" placeholder="Your Name" required>
-                          </div>
-                          <div class="col">
-                            <input class="emailadress" type="email" name="email" class="form-control" placeholder="Your Email" required>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <textarea class="message"placeholder="Your Message" class="form-control" name="message" rows="20" required></textarea>
-                      </div>
-                      <button class="sendemail" type="submit" class="btn btn-lg btn-dark btn-block"><s class="rainbow">Send Email</s></button>
-                    </form>
-                </div>
-            </div>
-        </main>
-        <footer>
-        </footer>
-    </div>
-<script src = "script.js"> </script>
+	<!-- below is the About me section -->
+	<div class="about-me">
+	<h1>ABOUT ME</h1><p class="glow-on-hover">I'm Philip, I absolutely love working with and on computers, this is my personal website just to mess around, learning things like website creation or showing my personal projects, I study T-Levels in DPDD, Whats that? Its <a class="rainbow" href="https://www.tlevels.gov.uk/students/subjects/digital-production-design-development" target="_blank">THIS,</a> I started on the 5th of september, and as of now have</p>
+	<!-- Below is the Clock -->
+	<div class="countdown">
+		<div id="days">00</div>
+		<div id="hours">00</div>
+		<div id="minutes">00</div>
+		<div id="seconds">00</div></div>
+	<p>Unti i finish my course. I also have a <a href="https://github.com/Krenity" class="rainbow" target="_blank">GITHUB</a> it has all my projects which are open source, though you can also view them below. I personally reccomend making your own website, even if youre using a website builder it could be a great starting place</p></div>
+	
+
+
+	  <!-- Below are my current projects -->
+	  <div class="my-projects">
+		<h1>MY PROJECTS</h1></div>
+		<div class="project-container">
+			<div class="project-element"><a class="rainbow" href="https://github.com/Krenity/Lab-4---Cookie-clicker-game" target="_blank">A working Cookie Clicker type game made in python in about a week</a></div>
+			<div class="project-element"><a class="rainbow" href="https://github.com/Krenity/JKLM-Bomb-party-bot" target="_blank">A working python bot for the game bomb party on jklm.fun made in a few hours</a></div>
+			<div class="project-element"><a class="rainbow" href="https://github.com/Krenity/Lab-5" target="_blank">A Game similar to JumpKing made in 4 weeks using GoDot</a></div>
+		</div>
+		  
+
+
+	<div class="circle"></div>
+	<script src="script.js"></script>
 </body>
 </html>

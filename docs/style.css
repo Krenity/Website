@@ -1,51 +1,79 @@
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-decoration: none;
-    align-items: center;
-    text-align: center;
-}
+  * {
+	background-color: #06060B;
+	cursor: none;
+  }
+  
+  body {
+	height: 100vh;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .circle {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	background-color: transparent;
+	border: 3px solid rgb(146, 221, 76);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	transition: all 0.01s ease-out;
+  }
+  
+  h1 {
+	color: #1f57ac;
+	font-family: "poppins", sans-serif;
+	font-weight: bold;
+	font-size: 72px;
+  }
+  p {
+	color: rgb(233, 233, 233);
+	font-family: "poppins", sans-serif;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+  }
 
-body {
-    background-color: #181818;
-}
-header {
-    height: 10px;
-    align-items: center;
-    text-align: center;
-}
-nav {
-    height: 5px;
-    align-items: center;
-    text-align: center;
-}
-main{
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    height: 5px;
-    align-items: center top;
-    text-align: center top;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-footer{
-    height: 50px;
-}   
-h1 {
-    color: white;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    font-size: 84px;
-}
-p {
-    color: white;
-    font-weight: 100;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px; 
-    
-}
-.rainbow {
+  .about-me {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+  }
+  .my-projects {
+	max-width: 700px;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	text-align: center;
+  }
+
+  .countdown {
+	display: flex;
+	font-family: "poppins", sans-serif;
+	font-weight: bold;
+	justify-content: center;
+	align-items: center;
+	font-size: 42px;
+	color: #f8f8f8;
+  }
+  
+  .countdown div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	width: 92px;
+	height: 90px;
+	background-color: transparent;
+	font-weight: bold;
+	border-radius: 8px;
+	background-color: #051a2259;
+	text-align: center;
+  }
+  
+  .rainbow {
     background-image: repeating-linear-gradient(45deg, violet, yellow, orange, red, violet, white);
     text-align: center;
     text-decoration: none;
@@ -61,129 +89,24 @@ p {
     50%{background-position:100% 25%}
     100%{background-position:0% 50%} 
 }
-#clockdiv{
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: bolder;
-    text-align: center;
-    font-size: 30px;
-}
+.hidden {
+	display: none;
+  }
+  
 
-#clockdiv > div{
-    padding: 10px;
-    border-radius: 3px;
-    background: transparent;
-    display: inline-block;
-}
-
-#clockdiv div > span{
-    padding: 15px;
-    border-radius: 3px;
-    background: #252525;;
-    display: inline-block;
-}
-
-.timertext{
-    color: white;
-    padding-top: 5px;
-    font-size: 18px;
-}
-
-.text {
-    color: beige;
-}
-.sendemail {
-    border: 0px;
-    font-size: 50px;
-    border-radius: 7px;
-    border-width: 5px;
-    margin-top: 10px;
-    background-color: #252525;
-}
-.emailadress {
-    border-radius: 7px;
-    border-color: #252525;
-    border-width: 5px;
-    border-style: solid;
-    box-shadow: none;
-    background-color: #252525;
-    color: white;
-}
-.name {
-    border-radius: 7px;
-    border-style: solid;
-    border-color: #252525;
-    border-width: 5px;
-    margin-bottom: 10px;
-    background-color: #252525;
-    color: white;
-}
-.message {
-    border-radius: 7px;
-    border-color: #252525;
-    border-width: 7px;
-    color: white;
-    border-style: linear;
-    margin-top: 10px;
-    background-color: #252525;
-}
-
-@import "https://unpkg.com/open-props";
-@import "https://unpkg.com/open-props/normalize.min.css";
-
-.mediascroller {
-  display: grid;
-  margin-right: -15%;
-  grid-auto-columns: 23%;
-  overscroll-behavior-inline: contain;
-  overflow-x: auto;
-  grid-auto-flow: column;
-}
-
-.mediaelement {
-  margin-bottom: 50;
-  color: white;
-  border-style: solid;
-  border-color: transparent;
-  margin-right: 15%;
-  display: grid;
-  grid-template-rows: min-content;
-  gap: var(--_spacer);
-  padding: var(--_spacer);
-  background: var(--surface-2);
-  border-radius: var(--radius-2);
-  box-shadow: var(--shadow-2);
-}
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(--_spacer, 1rem);
-}
-.snapsscroller {
-  scroll-snap-type: inline mandatory;
-}
-.snaparragement > * {
-  scroll-snap-align: start;
-}
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
-#style-2::-webkit-scrollbar-track
-{
-  border-radius: 5px;
-  padding-left: 1%;
-  display: flex;
-  overflow-x: scroll;
-  border-style: transparent;
-  background-color: #141414;
-}
-
-#style-2::-webkit-scrollbar
-{
-	width: 1px;
+.project-container {
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
 	background-color: transparent;
 }
-
-#style-2::-webkit-scrollbar-thumb
-{
-	border-radius: 5px;
-	background-color: rgb(36, 36, 36);
+.project-element {
+	margin-left: 2ch;
+	margin-right: 2ch;
+	text-align: center;
+	width: auto;
+	height: auto;
+	background-color: #051a2259;
+	border-radius: 8px;
 }

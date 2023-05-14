@@ -1,135 +1,66 @@
-function getTimeRemaining(endtime) {
-    var t = Date.parse("May 15 2024") - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
+(function() {
+    const circle = document.querySelector('.circle');
+    const speed = 0.2; // Adjust the speed of the circle's movement here
+    const charElems = document.querySelectorAll('.glow-on-hover'); // Select all the elements to apply the effect to
+  
+    const animate = () => {
+      const distX = mouseX - circleX;
+      const distY = mouseY - circleY;
+  
+      circleX = circleX + (distX * speed);
+      circleY = circleY + (distY * speed);
+  
+      circle.style.left = circleX + 'px';
+      circle.style.top = circleY + 'px';
+  
+      requestAnimationFrame(animate);
     };
-  }
   
-  function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    var daysSpan = clock.querySelector('.days');
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
+    let mouseX = 0;
+    let mouseY = 0;
+    let circleX = 0;
+    let circleY = 0;
   
-    function updateClock() {
-      var t = getTimeRemaining(endtime);
+    document.addEventListener('mousemove', e => {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+    });
   
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-  
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
+    // Check if the user is on a mobile device and hide the circle element if so
+    if (/Mobi/.test(navigator.userAgent)) {
+      circle.classList.add('hidden');
     }
   
-    updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
-  }
+    animate();
+  })();
   
-  var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-  initializeClock('clockdiv', deadline);s
-
-  var Gallery = (function() {
-    var colors = ['#34495E', '#2E4053', '#283747', '#212F3C', '#1B2631', '#2C3E50', '#273746'];
-    var scrollTimeId;
-    var posLeft = 0;
-
-    function Gallery(config) {
-        this.list = $(config.list);
-        this.items = this.list.find('li');
-        this.itemWidth = this.items.outerWidth();
-    };
-
-    Gallery.prototype = {
-        constructor: Gallery,
-
-        init: function() {
-            this.setGalleryWidth();
-            this.setItemsColor();
-            this.eventManager();
-
-            return this;
-        },
-
-        eventManager: function() {
-            var _this = this;
-
-            $("html, body").on('mousewheel', function(event) {
-                clearTimeout(scrollTimeId);
-                scrollTimeId = setTimeout(onScrollEventHandler.bind(this, event, _this.itemWidth), 0);
-            });
-        },
-
-        getRandomColor: function() {
-            return colors[Math.floor(Math.random() * colors.length)];
-        },
-
-        setItemsColor: function() {
-            var _this = this;
-
-            $.each(this.items, function(index, item) {
-                 item.style.backgroundColor = _this.getRandomColor();
-            });
-        },
-
-        setGalleryWidth: function() {
-            this.list.css('width', this.getGalleryWidth());
-        },
-
-        getGalleryWidth: function() {
-            var width = 0;
-
-            this.items.each(function(index, item) {
-                width += $(this).outerWidth();
-            });
-
-            return width;
-        }
-    };
-
-    function onScrollEventHandler(event, width) {
-      if (event.deltaY > 0) {
-        this.scrollLeft -= width / 2;
-      } else {
-        this.scrollLeft += width / 2;
-      }
- 
-        // Firefox, please, stop it
-         // if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-         //    if (event.originalEvent.detail > 0) {
-         //        posLeft += width / 2;
-         //        $('html').scrollLeft(posLeft);
-         //    } else {
-         //        posLeft -= width / 2;
-         //        $('html').scrollLeft(posLeft);
-         //    }
-         // } else {
-         //    if (event.originalEvent.wheelDelta > 0)  {
-         //        this.body.scrollLeft -= width / 2;
-         //    } else {
-         //        this.body.scrollLeft += width / 2;
-         //    }
-         // }
-        event.preventDefault();
-    };
-
-    return Gallery;
-})();
-
-
-$(document).ready(function() {
-    var gallery = new Gallery({
-        list: '.gallery'
-    }).init();
-});
+  const countdown = () => {
+    const targetDate = new Date('2024-05-15');
+    const now = new Date();
+    const timeRemaining = targetDate - now;
+  
+    let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  
+    days = days < 10 ? '0' + days : days;
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+  
+    document.getElementById('days').innerHTML = days;
+    document.getElementById('hours').innerHTML = hours;
+    document.getElementById('minutes').innerHTML = minutes;
+    document.getElementById('seconds').innerHTML = seconds;
+  
+    if (timeRemaining < 0) {
+      clearInterval(countdownInterval);
+      document.querySelector('.countdown').innerHTML = 'Countdown ended';
+    }
+  };
+  
+  const countdownInterval = setInterval(countdown, 1000);
+  
