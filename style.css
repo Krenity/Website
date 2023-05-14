@@ -3,6 +3,7 @@
 	cursor: none;
 	overflow-y: hidden; 
 	overflow-x: hidden; 
+	scrollbar-width: none;
   }
   
   body {
@@ -10,6 +11,9 @@
 	margin: auto;
 	justify-content: center;
 	align-items: center;
+	overflow-y: hidden; 
+	overflow-x: hidden; 
+	scrollbar-width: none;
   }
   
   .circle {
