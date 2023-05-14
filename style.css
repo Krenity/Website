@@ -1,7 +1,8 @@
   * {
 	background-color: #06060B;
 	cursor: none;
-	overflow: hidden; 
+	overflow-y: hidden; 
+	overflow-x: hidden; 
   }
   
   body {
