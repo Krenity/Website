@@ -50,7 +50,7 @@ html {
   }
   .my-projects {
 	max-width: 700px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	margin: 0 auto;
 	text-align: center;
   }
@@ -105,15 +105,17 @@ html {
 	margin: auto;
 	justify-content: center;
 	align-items: center;
-	display: flex;
+	display: block;
 	background-color: transparent;
 }
 .project-element {
-	margin-left: 2ch;
-	margin-right: 2ch;
+	margin: auto;
+	margin-top: 10px;
+	align-self: center;
 	text-align: center;
-	width: auto;
+	display: flex;
+	width: 40%;
 	height: auto;
-	background-color: #051a2259;
+	background-color: #080f13;
 	border-radius: 8px;
 }
