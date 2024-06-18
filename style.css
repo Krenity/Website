@@ -35,6 +35,9 @@ html {
 	font-weight: bold;
 	font-size: 72px;
   }
+
+
+
   p {
 	color: rgb(233, 233, 233);
 	font-family: "poppins", sans-serif;
@@ -59,21 +62,21 @@ html {
 	display: flex;
 	font-family: "poppins", sans-serif;
 	font-weight: bold;
+	gap: 30px;
 	justify-content: center;
 	align-items: center;
 	font-size: 42px;
 	color: #f8f8f8;
   }
   
-  .countdown div {
+  .countdown > div {
 	display: flex;
-	flex-direction: column;
+	padding: 5px;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	margin: 0 5px;
 	width: 92px;
 	height: 90px;
-	background-color: transparent;
 	font-weight: bold;
 	border-radius: 8px;
 	background-color: #051a2259;
@@ -119,3 +122,33 @@ html {
 	background-color: #080f13;
 	border-radius: 8px;
 }
+
+  @media (max-width: 425px) {
+	h1 {
+		font-size: 62px;
+	}
+
+	.countdown {
+		scale: 0.8;
+		gap: 10px;
+	}
+
+
+
+  }
+
+  @media (max-width: 1000px) {
+	h1 {
+		font-size: 62px;
+	}
+
+	.countdown {
+		scale: 0.8;
+		gap: 10px;
+	}
+
+	.project-element {
+		width: 75%;
+	}
+
+  }

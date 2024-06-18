@@ -1,6 +1,6 @@
 (function() {
     const circle = document.querySelector('.circle');
-    const speed = 0.2; // Adjust the speed of the circle's movement here
+    const speed = 0.4; // Adjust the speed of the circle's movement here
     const charElems = document.querySelectorAll('.glow-on-hover'); // Select all the elements to apply the effect to
   
     const animate = () => {
@@ -35,7 +35,7 @@
   })();
   
   const countdown = () => {
-    const targetDate = new Date('2024-05-15');
+    const targetDate = new Date('2024-08-28');
     const now = new Date();
     const timeRemaining = targetDate - now;
   
@@ -51,10 +51,10 @@
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = seconds < 10 ? '0' + seconds : seconds;
   
-    document.getElementById('days').innerHTML = days;
-    document.getElementById('hours').innerHTML = hours;
-    document.getElementById('minutes').innerHTML = minutes;
-    document.getElementById('seconds').innerHTML = seconds;
+    document.getElementById('days').innerHTML =    "<div style='background: #060d13;'>" + days + "</div><div       style='background: #060d13; color: #1a447d;'>D</div>";
+    document.getElementById('hours').innerHTML =   "<div style='background: #060d13;'>" + hours + "</div><div     style='background: #060d13; color: #1a447d;'>H</div>";
+    document.getElementById('minutes').innerHTML = "<div style='background: #060d13;'>" + minutes + "</div><div style='background: #060d13; color: #1a447d;'>M</div>";
+    document.getElementById('seconds').innerHTML = "<div style='background: #060d13;'>" + seconds + "</div><div style='background: #060d13; color: #1a447d;'>S</div>";
   
     if (timeRemaining < 0) {
       clearInterval(countdownInterval);
